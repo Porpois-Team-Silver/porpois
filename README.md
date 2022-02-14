@@ -1,7 +1,7 @@
 # porpois
 A mobile application to suggest small activities that increase feelings of richness, connection, and purpose.
 
-Team Silver - Spring 2022
+Team Silver - Spring 2022 - CS411W
 
 7 Members
 
