@@ -1,6 +1,7 @@
 package com.example.porpois.data;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 // Activity class to hold the values stored in FireBase
 public class TaskActivity {
@@ -45,6 +46,37 @@ public class TaskActivity {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TaskActivity)) return false;
+        TaskActivity that = (TaskActivity) o;
+        return dislikes == that.dislikes && likes == that.likes && pointValue == that.pointValue
+                && urlValid == that.urlValid && category.equals(that.category)
+                && city.equals(that.city) && tags.equals(that.tags) && title.equals(that.title)
+                && url.equals(that.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(category, city, dislikes,
+                likes, pointValue, tags, title, url, urlValid);
+    }
+
+    @Override
+    public String toString() {
+        return "TaskActivity{" +
+                "category='" + category + '\'' +
+                ", city='" + city + '\'' +
+                ", dislikes=" + dislikes +
+                ", likes=" + likes +
+                ", pointValue=" + pointValue +
+                ", tags=" + tags +
+                ", title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                ", urlValid=" + urlValid +
+                '}';
+    }
 
     // getters and setters
     public String getCategory() {
