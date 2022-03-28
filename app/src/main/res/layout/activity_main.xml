@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4E5D7"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/buttonReveal"
+            style="@style/fontStyle__Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="160dp"
+            android:backgroundTint="#85D5DF"
+            android:text="@string/clickMe"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hiddenText"
+            app:layout_constraintVertical_bias="0.463" />
+
+        <TextView
+            android:id="@+id/hiddenText"
+            style="@style/fontStyle__Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/helloText"
+            android:textSize="34sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.202" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

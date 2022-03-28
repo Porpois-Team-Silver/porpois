@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">porpois</string>
+    <string name="helloText">Hello, Pluto!</string>
+    <string name="clickMe">Click Me!</string>
 </resources>
