@@ -3,7 +3,7 @@ package com.example.porpois.data;
 import java.util.ArrayList;
 
 // Activity class to hold the values stored in FireBase
-public class Activity {
+public class TaskActivity {
     private String category;
     private String city;
     private int dislikes;
@@ -15,7 +15,7 @@ public class Activity {
     private boolean urlValid;
 
     // empty default constructor
-    public Activity() {
+    public TaskActivity() {
         this.category = "N/A";
         this.city = "N/A";
         this.dislikes = 0;
@@ -27,8 +27,8 @@ public class Activity {
     }
 
     // parameterized default constructor
-    public Activity(String category, String city, int dislikes, int likes, int pointValue,
-                    ArrayList<String> tags, String title, String url, boolean urlValid) {
+    public TaskActivity(String category, String city, int dislikes, int likes, int pointValue,
+                        ArrayList<String> tags, String title, String url, boolean urlValid) {
         this.category = category;
         this.city = city;
         this.dislikes = dislikes;
