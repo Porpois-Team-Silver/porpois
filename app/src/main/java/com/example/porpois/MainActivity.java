@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.example.porpois.databinding.ActivityMainBinding;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
