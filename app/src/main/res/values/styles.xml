@@ -5,4 +5,8 @@
         <item name="android:fontFamily">@font/aclonica</item>
         <item name="android:gravity">center</item>
     </style>
+
+    <style name="buttonCategoryStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+    </style>
 </resources>

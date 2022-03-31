@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Porpois">
         <activity
+            android:name=".taskPages.Make"
+            android:exported="false" />
+        <activity
+            android:name=".taskPages.Go"
+            android:exported="false" />
+        <activity
+            android:name=".taskPages.Give"
+            android:exported="false" />
+        <activity
+            android:name=".taskPages.Connect"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

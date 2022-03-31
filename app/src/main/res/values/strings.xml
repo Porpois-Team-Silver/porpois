@@ -2,4 +2,79 @@
     <string name="app_name">porpois</string>
     <string name="helloText">Hello, Pluto!</string>
     <string name="clickMe">Click Me!</string>
+    <string name="welcome_title">Good Afternoon, Jonny</string>
+
+    <!--  Dummy Object 1 -->
+    <string name="task1_category">Connect</string>
+    <string name="task1_city">Norfolk</string>
+    <string name="task1_dislikes">0</string>
+    <string name="task1_likes">4</string>
+    <string name="task1_pointValue">10</string>
+    <string name="task1_tags">thank, connection</string>
+    <string name="task1_title">Say Thank You to a First Responder</string>
+    <string name="task1_url">www.validurl.com</string>
+    <string name="task1_urlValid">true</string>
+    <string name="task1_button">connect</string>
+
+    <!--  Dummy Object 2 -->
+    <string name="task2_category">Give</string>
+    <string name="task2_city">Virginia Beach</string>
+    <string name="task2_dislikes">2</string>
+    <string name="task2_likes">0</string>
+    <string name="task2_pointValue">0</string>
+    <string name="task2_tags">give, charity, donate</string>
+    <string name="task2_title">Give an Item to Your Favorite Charity</string>
+    <string name="task2_url">www.iamsus.com</string>
+    <string name="task2_urlValid">false</string>
+    <string name="task2_button">give</string>
+
+    <!--  Dummy Object 3 -->
+    <string name="task3_category">Go</string>
+    <string name="task3_city">Norfolk</string>
+    <string name="task3_dislikes">0</string>
+    <string name="task3_likes">12</string>
+    <string name="task3_pointValue">145</string>
+    <string name="task3_tags">outside, hike, trail</string>
+    <string name="task3_title">Hike 1 Mile on Your Local Trail.</string>
+    <string name="task3_url">www.hike.com</string>
+    <string name="task3_urlValid">true</string>
+    <string name="task3_button">go</string>
+
+    <!--  Dummy Object 4 -->
+    <string name="task4_category">Make</string>
+    <string name="task4_city">Norfolk</string>
+    <string name="task4_dislikes">0</string>
+    <string name="task4_likes">23</string>
+    <string name="task4_pointValue">100</string>
+    <string name="task4_tags">cook, pancake, health</string>
+    <string name="task4_title">Make A Kodiak Protein Pancake</string>
+    <string name="task4_url">www.kodiakcakes.com</string>
+    <string name="task4_urlValid">true</string>
+    <string name="task4_button">make</string>
+
+    <!--  Dummy Object 5 -->
+    <string name="task5_category">Try</string>
+    <string name="task5_city">Norfolk</string>
+    <string name="task5_dislikes">76</string>
+    <string name="task5_likes">0</string>
+    <string name="task5_pointValue">0</string>
+    <string name="task5_tags">eat, anchovies, fish</string>
+    <string name="task5_title">Try Anchovy Pizza</string>
+    <string name="task5_url">www.pizzarocks.com</string>
+    <string name="task5_urlValid">false</string>
+    <string name="task5_button">try</string>
+
+    <!--  Dummy Object 6 -->
+    <string name="task6_category">Help</string>
+    <string name="task6_city">Virginia Beach</string>
+    <string name="task6_dislikes">0</string>
+    <string name="task6_likes">66</string>
+    <string name="task6_pointValue">944</string>
+    <string name="task6_tags">clean, recycle, help</string>
+    <string name="task6_title">Pick Up Trash on Your Local Highway</string>
+    <string name="task6_url">www.cleanoutdoors.com</string>
+    <string name="task6_urlValid">true</string>
+    <string name="task6_button">help</string>
+
+
 </resources>
