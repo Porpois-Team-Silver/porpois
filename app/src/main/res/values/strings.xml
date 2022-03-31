@@ -75,6 +75,7 @@
     <string name="task6_url">www.cleanoutdoors.com</string>
     <string name="task6_urlValid">true</string>
     <string name="task6_button">help</string>
+    <string name="profilePicturePlaceholder">Placeholder Android Image</string>
 
 
 </resources>

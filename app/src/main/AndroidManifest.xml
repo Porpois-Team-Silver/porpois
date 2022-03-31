@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Porpois">
         <activity
+            android:name=".taskPages.Help"
+            android:exported="false" />
+        <activity
+            android:name=".taskPages.Try"
+            android:exported="false" />
+        <activity
             android:name=".taskPages.Make"
             android:exported="false" />
         <activity

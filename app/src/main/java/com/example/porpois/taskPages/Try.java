@@ -8,15 +8,14 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Window;
 
-import com.example.porpois.MainActivity;
 import com.example.porpois.R;
 
-public class Connect extends AppCompatActivity {
+public class Try extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connect);
+        setContentView(R.layout.activity_try);
 
         // new colors for the top bars
         ActionBar actionBar;
@@ -24,7 +23,7 @@ public class Connect extends AppCompatActivity {
         assert actionBar != null;
         setActionBarColor(actionBar, "#6E9BD4");
 
-        Window window = Connect.this.getWindow();
+        Window window = Try.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
     }
 
