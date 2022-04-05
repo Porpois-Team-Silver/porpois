@@ -1,15 +1,15 @@
 package com.example.porpois;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.Button;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.porpois.databinding.ActivityMainBinding;
 import com.example.porpois.taskPages.Connect;
@@ -30,14 +30,16 @@ public class MainActivity extends AppCompatActivity {
         // set up data binding on this activity
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        // new colors for the top bars
+        //new colors for the top bars
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         assert actionBar != null;
         setActionBarColor(actionBar, "#6E9BD4");
 
+
         Window window = MainActivity.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
+
 
         // connect button behaviors
         Button connectButton = binding.connectButton;
@@ -82,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
 
     private void setActionBarColor(ActionBar actionBar, String color) {
@@ -92,6 +93,6 @@ public class MainActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
     }
-}
 
-//test first push (Devin Barry)
+
+}

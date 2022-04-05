@@ -76,6 +76,10 @@
     <string name="task6_urlValid">true</string>
     <string name="task6_button">help</string>
     <string name="profilePicturePlaceholder">Placeholder Android Image</string>
+    <string name="title_activity_fullscreen_start_logo">FullscreenActivityStartLogo</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="logo">Logo</string>
 
 
 </resources>
