@@ -1,12 +1,12 @@
 package com.example.porpois.taskPages;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Window;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.porpois.R;
 
@@ -15,13 +15,13 @@ public class Go extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_go);
 
-        // new colors for the top bars
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
+        //remove action bar
+        ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
-        setActionBarColor(actionBar, "#6E9BD4");
+        actionBar.hide();
+
+        setContentView(R.layout.activity_go);
 
         Window window = Go.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
