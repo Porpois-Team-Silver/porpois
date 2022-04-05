@@ -25,17 +25,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*
+            This removes the action bar (top banner that said "porpois").
+            I think it looks cleaner without it when it comes out of the load
+            screen but this is something we can discuss later
+        */
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
+
         setContentView(R.layout.activity_main);
 
         // set up data binding on this activity
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        //new colors for the top bars
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-        assert actionBar != null;
-        setActionBarColor(actionBar, "#6E9BD4");
+        //The code below is commented out since the action bar has been temporarily disabled
 
+        /*
+            new colors for the top bars
+            ActionBar actionBar;
+            actionBar = getSupportActionBar();
+            assert actionBar != null;
+            setActionBarColor(actionBar, "#6E9BD4");
+        */
 
         Window window = MainActivity.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
