@@ -7,7 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2LoadScreen extends AppCompatActivity {
+public class ActivityLoadScreen extends AppCompatActivity {
     //Time in milliseconds to switch to MainActivity
     private static int TIME_OUT = 3800;
 
@@ -27,7 +27,7 @@ public class MainActivity2LoadScreen extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
 
-                Intent i = new Intent(MainActivity2LoadScreen.this, MainActivity.class);
+                Intent i = new Intent(ActivityLoadScreen.this, ActivityCreateNickname.class);
                 startActivity(i);
                 finish();
 

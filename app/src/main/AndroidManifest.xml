@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Porpois">
         <activity
+            android:name=".ActivityCreateNickname"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -31,9 +34,9 @@
             android:name=".taskPages.Connect"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2LoadScreen"
-            android:theme="@style/AppTheme.Fullscreen"
-            android:exported="true">
+            android:name=".ActivityLoadScreen"
+            android:exported="true"
+            android:theme="@style/AppTheme.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

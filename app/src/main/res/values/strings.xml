@@ -80,6 +80,9 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="logo">Logo</string>
+    <string name="nickname">Nickname</string>
+    <string name="Welcome_Message">Welcome, Please Personalize Your Porpois Profile</string>
+    <string name="create">Create</string>
 
 
 </resources>
