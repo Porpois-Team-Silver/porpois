@@ -1,11 +1,13 @@
 package com.example.porpois;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,7 @@ import com.example.porpois.taskPages.Try;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,23 +37,20 @@ public class MainActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.hide();
 
+        Window window = MainActivity.this.getWindow();
+        window.setStatusBarColor(Color.rgb(99, 136, 185));
+
         setContentView(R.layout.activity_main);
 
         // set up data binding on this activity
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        //The code below is commented out since the action bar has been temporarily disabled
 
-        /*
-            new colors for the top bars
-            ActionBar actionBar;
-            actionBar = getSupportActionBar();
-            assert actionBar != null;
-            setActionBarColor(actionBar, "#6E9BD4");
-        */
 
-        Window window = MainActivity.this.getWindow();
-        window.setStatusBarColor(Color.rgb(99, 136, 185));
+        String nickname = getIntent().getStringExtra("nickname").trim();
+        TextView greeting = binding.mainActivityGreeting;
+        greeting.setText(String.format("Good Afternoon, %s", nickname));
+
 
 
         // connect button behaviors

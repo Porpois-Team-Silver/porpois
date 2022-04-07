@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,9 @@ public class ActivityCreateNickname extends AppCompatActivity {
 
     public void onClickToMainActivity(View view){
         Intent intent = new Intent(ActivityCreateNickname.this, MainActivity.class);
+        EditText editTextNickname = findViewById(R.id.editTextNickname);
+        intent.putExtra("nickname", editTextNickname.getText().toString().trim());
+
         startActivity(intent);
     }
 }
