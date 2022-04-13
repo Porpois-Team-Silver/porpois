@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "200157695234",
+    "project_id": "porpois-1e12c",
+    "storage_bucket": "porpois-1e12c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200157695234:android:f9f186232d448edfb5061b",
+        "android_client_info": {
+          "package_name": "com.example.porpois"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200157695234-pbsjpklv9futh59kbf2sd1auonikt0fe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkqP-IkrcxFCbsBW9WmGt_AP6DVzcxbwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200157695234-pbsjpklv9futh59kbf2sd1auonikt0fe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
