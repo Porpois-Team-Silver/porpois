@@ -28,8 +28,8 @@ android {
     }
 
     buildFeatures {
-        dataBinding true
-        viewBinding true
+        dataBinding false
+        viewBinding false
     }
 }
 
