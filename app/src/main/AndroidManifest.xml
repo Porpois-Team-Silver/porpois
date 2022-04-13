@@ -10,31 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Porpois">
         <activity
-            android:name=".ActivityCreateNickname"
+            android:name="edu.odu.porpois.ui.ActivityCreateNickname"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="edu.odu.porpois.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".taskPages.Help"
+            android:name="edu.odu.porpois.ui.Help"
             android:exported="false" />
         <activity
-            android:name=".taskPages.Try"
+            android:name="edu.odu.porpois.ui.Try"
             android:exported="false" />
         <activity
-            android:name=".taskPages.Make"
+            android:name="edu.odu.porpois.ui.Make"
             android:exported="false" />
         <activity
-            android:name=".taskPages.Go"
+            android:name="edu.odu.porpois.ui.Go"
             android:exported="false" />
         <activity
-            android:name=".taskPages.Give"
+            android:name="edu.odu.porpois.ui.Give"
             android:exported="false" />
         <activity
-            android:name=".taskPages.Connect"
+            android:name="edu.odu.porpois.ui.Connect"
             android:exported="false" />
         <activity
-            android:name=".ActivityLoadScreen"
+            android:name="edu.odu.porpois.ui.ActivityLoadScreen"
             android:exported="true"
             android:theme="@style/AppTheme.Fullscreen">
             <intent-filter>

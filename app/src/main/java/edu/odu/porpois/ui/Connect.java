@@ -1,4 +1,4 @@
-package com.example.porpois.taskPages;
+package edu.odu.porpois.ui;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.porpois.R;
 
-public class Try extends AppCompatActivity {
+public class Connect extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class Try extends AppCompatActivity {
         assert actionBar != null;
         actionBar.hide();
 
-        setContentView(R.layout.activity_try);
+        setContentView(R.layout.activity_connect);
 
-        Window window = Try.this.getWindow();
+        Window window = Connect.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
     }
 

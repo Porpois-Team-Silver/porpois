@@ -1,4 +1,4 @@
-package com.example.porpois.data;
+package edu.odu.porpois.model;
 
 import java.util.ArrayList;
 import java.util.Objects;

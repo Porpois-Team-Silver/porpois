@@ -1,4 +1,4 @@
-package com.example.porpois;
+package edu.odu.porpois;
 
 import android.content.Context;
 

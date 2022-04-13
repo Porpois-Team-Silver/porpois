@@ -1,4 +1,4 @@
-package com.example.porpois;
+package edu.odu.porpois;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,13 +13,14 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.example.porpois.R;
 import com.example.porpois.databinding.ActivityMainBinding;
-import com.example.porpois.taskPages.Connect;
-import com.example.porpois.taskPages.Give;
-import com.example.porpois.taskPages.Go;
-import com.example.porpois.taskPages.Help;
-import com.example.porpois.taskPages.Make;
-import com.example.porpois.taskPages.Try;
+import edu.odu.porpois.ui.Connect;
+import edu.odu.porpois.ui.Give;
+import edu.odu.porpois.ui.Go;
+import edu.odu.porpois.ui.Help;
+import edu.odu.porpois.ui.Make;
+import edu.odu.porpois.ui.Try;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
