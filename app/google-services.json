@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:200157695234:android:f9f186232d448edfb5061b",
         "android_client_info": {
-          "package_name": "com.example.porpois"
+          "package_name": "edu.odu.porpois"
         }
       },
       "oauth_client": [
