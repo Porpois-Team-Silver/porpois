@@ -1,11 +1,26 @@
 package edu.odu.porpois.model;
 
+import static java.lang.Integer.parseInt;
+
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 // Activity class to hold the values stored in FireBase
 public class TaskActivity {
+    // Keys
+    public final static String CATEGORY = "category";
+    public final static String CITY = "city";
+    public final static String DISLIKES = "dislikes";
+    public final static String LIKES = "likes";
+    public final static String POINT_VALUE = "point_value";
+    public final static String TAGS = "tags";
+    public final static String TITLE = "title";
+    public final static String URL = "url";
+    public final static String URL_VALID = "url_valid";
+
     private int category;
     private String city;
     private int dislikes;
@@ -42,6 +57,23 @@ public class TaskActivity {
         this.urlValid = urlValid;
     }
 
+    // document constructor
+    public TaskActivity(QueryDocumentSnapshot document)
+    {
+        this.category = parseInt(document.get(CATEGORY).toString());
+        this.city = document.get(CITY).toString();
+        this.dislikes = parseInt(document.get(DISLIKES).toString());
+        this.likes = parseInt(document.get(LIKES).toString());
+        this.pointValue = parseInt(document.get(POINT_VALUE).toString());
+        this.tags = (List) document.get(TAGS);
+        this.title = document.get(TITLE).toString();
+        if (document.get(URL) != null)
+            this.url = document.get(URL).toString();
+        else
+            this.url = null;
+        this.urlValid = (boolean) document.get(URL_VALID);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -62,16 +94,15 @@ public class TaskActivity {
     @Override
     public String toString() {
         return "TaskActivity{" +
-                "category='" + category + '\'' +
-                ", city='" + city + '\'' +
+                "category=" + category +
+                ", city=" + city +
                 ", dislikes=" + dislikes +
                 ", likes=" + likes +
                 ", pointValue=" + pointValue +
                 ", tags=" + tags +
-                ", title='" + title + '\'' +
-                ", url='" + url + '\'' +
-                ", urlValid=" + urlValid +
-                '}';
+                ", title=" + title +
+                ", url=" + url +
+                ", urlValid=" + urlValid + "}";
     }
 
     public int getCategory() {
