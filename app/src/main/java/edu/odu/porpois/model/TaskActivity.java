@@ -1,23 +1,24 @@
 package edu.odu.porpois.model;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 // Activity class to hold the values stored in FireBase
 public class TaskActivity {
-    private String category;
+    private int category;
     private String city;
     private int dislikes;
     private int likes;
     private int pointValue;
-    private ArrayList<String> tags = new ArrayList<>();
+    private List<String> tags;
     private String title;
     private String url;
     private boolean urlValid;
 
     // empty default constructor
     public TaskActivity() {
-        this.category = "N/A";
+        this.category = 0;
         this.city = "N/A";
         this.dislikes = 0;
         this.likes = 0;
@@ -28,8 +29,8 @@ public class TaskActivity {
     }
 
     // parameterized default constructor
-    public TaskActivity(String category, String city, int dislikes, int likes, int pointValue,
-                        ArrayList<String> tags, String title, String url, boolean urlValid) {
+    public TaskActivity(int category, String city, int dislikes, int likes, int pointValue,
+                        List<String> tags, String title, String url, boolean urlValid) {
         this.category = category;
         this.city = city;
         this.dislikes = dislikes;
@@ -39,11 +40,6 @@ public class TaskActivity {
         this.title = title;
         this.url = url;
         this.urlValid = urlValid;
-
-        // sets the empty default ArrayList. | Default size = 10
-        for(int i = 0; i < tags.size(); i++) {
-            tags.set(i, "");
-        }
     }
 
     @Override
@@ -52,7 +48,7 @@ public class TaskActivity {
         if (!(o instanceof TaskActivity)) return false;
         TaskActivity that = (TaskActivity) o;
         return dislikes == that.dislikes && likes == that.likes && pointValue == that.pointValue
-                && urlValid == that.urlValid && category.equals(that.category)
+                && urlValid == that.urlValid && category == that.category
                 && city.equals(that.city) && tags.equals(that.tags) && title.equals(that.title)
                 && url.equals(that.url);
     }
@@ -78,12 +74,11 @@ public class TaskActivity {
                 '}';
     }
 
-    // getters and setters
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(int category) {
         this.category = category;
     }
 
@@ -119,7 +114,7 @@ public class TaskActivity {
         this.pointValue = pointValue;
     }
 
-    public ArrayList<String> getTags() {
+    public List<String> getTags() {
         return tags;
     }
 
