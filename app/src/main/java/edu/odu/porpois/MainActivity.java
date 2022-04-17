@@ -5,11 +5,15 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,55 +48,25 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        /* set up data binding on this activity
-//        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        LinearLayout taskGallery = findViewById(R.id.taskGallery);
+        LayoutInflater gInflator = LayoutInflater.from(this);
 
-        String nickname = getIntent().getStringExtra("nickname").trim();
-        TextView greeting = findViewById(R.id.mainActivityGreeting);
-        greeting.setText(String.format("Good Afternoon, %s", nickname));
+        for(int i = 1; i < 20; i++) {
+            View view = gInflator.inflate(R.layout.task, taskGallery, false);
+            ImageView scrollImg = view.findViewById(R.id.scrollImg);
 
-        // connect button behaviors
-        Button connectButton = findViewById(R.id.connectButton);
-        connectButton.setOnClickListener(view -> {
-            Intent connectIntent = new Intent(MainActivity.this, Connect.class);
-            startActivity(connectIntent);
-        });
+            if(i % 3 == 0) {
+                scrollImg.setImageResource(R.drawable.sample1);
+            }
+            else if (i % 2 == 0) {
+                scrollImg.setImageResource(R.drawable.sample2);
+            }
+            else {
+                scrollImg.setImageResource(R.drawable.sample3);
+            }
 
-        // give button behaviors
-        Button giveButton = findViewById(R.id.buttonGive);
-        giveButton.setOnClickListener(view -> {
-            Intent giveIntent = new Intent(MainActivity.this, Give.class);
-            startActivity(giveIntent);
-        });
-
-        // go button behaviors
-        Button goButton = findViewById(R.id.goButton);
-        goButton.setOnClickListener(view -> {
-            Intent goIntent = new Intent(MainActivity.this, Go.class);
-            startActivity(goIntent);
-        });
-
-        // make button behaviors
-        Button makeButton = findViewById(R.id.makeButton);
-        makeButton.setOnClickListener(view -> {
-            Intent makeIntent = new Intent(MainActivity.this, Make.class);
-            startActivity(makeIntent);
-        });
-
-        // try button behaviors
-        Button tryButton = findViewById(R.id.tryButton);
-        tryButton.setOnClickListener(view -> {
-            Intent tryIntent = new Intent(MainActivity.this, Try.class);
-            startActivity(tryIntent);
-        });
-
-        // give button behaviors
-        Button helpButton = findViewById(R.id.helpButton);
-        helpButton.setOnClickListener(view -> {
-            Intent helpIntent = new Intent(MainActivity.this, Help.class);
-            startActivity(helpIntent);
-        });
-        */
+            taskGallery.addView(view);
+        }
     }
 
     @Override
