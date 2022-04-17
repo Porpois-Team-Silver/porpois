@@ -4,6 +4,14 @@
     <string name="clickMe">Click Me!</string>
     <string name="welcome_title">Good Afternoon, Jonny</string>
 
+    <string name="item0">profile</string>
+    <string name="item1">Connect</string>
+    <string name="item2">Move</string>
+    <string name="item3">Give</string>
+    <string name="item4">Create</string>
+    <string name="item5">Rejuvenate</string>
+
+
     <!--  Dummy Object 1 -->
     <string name="task1_category">Connect</string>
     <string name="task1_city">Norfolk</string>
