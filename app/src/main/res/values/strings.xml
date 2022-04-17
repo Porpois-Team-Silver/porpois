@@ -91,6 +91,8 @@
     <string name="nickname">Nickname</string>
     <string name="Welcome_Message">Welcome, Please Personalize Your Porpois Profile</string>
     <string name="create">Create</string>
+    <string name="zip_code">Zip Code</string>
+
 
 
 </resources>

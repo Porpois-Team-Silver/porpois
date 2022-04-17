@@ -4,76 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-<androidx.constraintlayout.widget.ConstraintLayout
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:alpha="1"
-android:background="@color/backgroundColor"
-tools:context="edu.odu.porpois.ui.ActivityCreateNickname">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:alpha="1"
-        android:contentDescription="@string/profilePicturePlaceholder"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNickname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        android:background="@drawable/wel"
+        tools:context="edu.odu.porpois.ui.ActivityCreateNickname">
 
-    <EditText
-        android:id="@+id/editTextNickname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:autofillHints="Nickname"
-        android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="@string/nickname"
-        android:inputType="textPersonName"
-        android:textColor="?android:attr/textColorSecondary"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
+        <Button
+            android:id="@+id/buttonNickname"
+            style="@style/buttonCategoryStyle"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif"
+            android:onClick="onClickToMainActivity"
+            android:text="@string/create"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.778"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
+            tools:ignore="UsingOnClickInXml,TextContrastCheck" />
 
-    <Button
-        android:id="@+id/buttonNickname"
-        style="@style/buttonCategoryStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:onClick="onClickToMainActivity"
-        android:text="@string/create"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.894"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437"
-        tools:ignore="UsingOnClickInXml" />
+        <EditText
+            android:id="@+id/editTextNicknameFinal"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:alpha="1"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/nickname"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.419"
+            tools:visibility="visible"
+            android:importantForAutofill="no" />
 
-    <TextView
-        android:id="@+id/nicknameWelcomeTextView"
-        style="@style/fontStyle__Center"
-        android:layout_width="246dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/Welcome_Message"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.012" />
+        <EditText
+            android:id="@+id/editTextZipcodeFinal"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:ems="10"
+            android:hint="@string/zip_code"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNicknameFinal"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextContrastCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </layout>

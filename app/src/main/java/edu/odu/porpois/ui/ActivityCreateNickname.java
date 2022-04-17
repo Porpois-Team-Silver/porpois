@@ -34,8 +34,8 @@ public class ActivityCreateNickname extends AppCompatActivity {
     public void onClickToMainActivity(View view){
         Intent intent = new Intent(ActivityCreateNickname.this, MainActivity.class);
         Toast.makeText(this, "Welcome", Toast.LENGTH_LONG).show();
-        EditText editTextNickname = findViewById(R.id.editTextNickname);
-        intent.putExtra("nickname", editTextNickname.getText().toString().trim());
+        //EditText editTextNickname = findViewById(R.id.editTextNickname);
+        //intent.putExtra("nickname", editTextNickname.getText().toString().trim());
 
         startActivity(intent);
     }
