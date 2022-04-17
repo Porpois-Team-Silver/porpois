@@ -17,7 +17,7 @@ public class TaskActivity {
     public final static String LIKES = "likes";
     public final static String POINT_VALUE = "point_value";
     public final static String TAGS = "tags";
-    public final static String TITLE = "title";
+    public final static String IMAGE = "image";
     public final static String URL = "url";
     public final static String URL_VALID = "url_valid";
 
@@ -27,7 +27,7 @@ public class TaskActivity {
     private int likes;
     private int pointValue;
     private List<String> tags;
-    private String title;
+    private String image;
     private String url;
     private boolean urlValid;
 
@@ -38,21 +38,21 @@ public class TaskActivity {
         this.dislikes = 0;
         this.likes = 0;
         this.pointValue = 0;
-        this.title = "N/A";
+        this.image = "N/A";
         this.url = "N/A";
         this.urlValid = false;
     }
 
     // parameterized default constructor
     public TaskActivity(int category, String city, int dislikes, int likes, int pointValue,
-                        List<String> tags, String title, String url, boolean urlValid) {
+                        List<String> tags, String image, String url, boolean urlValid) {
         this.category = category;
         this.city = city;
         this.dislikes = dislikes;
         this.likes = likes;
         this.pointValue = pointValue;
         this.tags = tags;
-        this.title = title;
+        this.image = image;
         this.url = url;
         this.urlValid = urlValid;
     }
@@ -66,7 +66,7 @@ public class TaskActivity {
         this.likes = parseInt(document.get(LIKES).toString());
         this.pointValue = parseInt(document.get(POINT_VALUE).toString());
         this.tags = (List) document.get(TAGS);
-        this.title = document.get(TITLE).toString();
+        this.image = document.get(IMAGE).toString();
         if (document.get(URL) != null)
             this.url = document.get(URL).toString();
         else
@@ -81,14 +81,14 @@ public class TaskActivity {
         TaskActivity that = (TaskActivity) o;
         return dislikes == that.dislikes && likes == that.likes && pointValue == that.pointValue
                 && urlValid == that.urlValid && category == that.category
-                && city.equals(that.city) && tags.equals(that.tags) && title.equals(that.title)
+                && city.equals(that.city) && tags.equals(that.tags) && image.equals(that.image)
                 && url.equals(that.url);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(category, city, dislikes,
-                likes, pointValue, tags, title, url, urlValid);
+                likes, pointValue, tags, image, url, urlValid);
     }
 
     @Override
@@ -100,7 +100,7 @@ public class TaskActivity {
                 ", likes=" + likes +
                 ", pointValue=" + pointValue +
                 ", tags=" + tags +
-                ", title=" + title +
+                ", image=" + image +
                 ", url=" + url +
                 ", urlValid=" + urlValid + "}";
     }
@@ -153,12 +153,12 @@ public class TaskActivity {
         this.tags = tags;
     }
 
-    public String getTitle() {
-        return title;
+    public String getImage() {
+        return image;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setImage(String title) {
+        this.image = title;
     }
 
     public String getUrl() {
