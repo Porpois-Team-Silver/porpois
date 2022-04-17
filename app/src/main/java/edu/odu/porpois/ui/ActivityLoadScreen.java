@@ -11,21 +11,16 @@ import com.example.porpois.R;
 
 public class ActivityLoadScreen extends AppCompatActivity {
     //Time in milliseconds to switch to MainActivity
-    private static int TIME_OUT = 3800;
+    private static int TIME_OUT = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity2_load_screen);
 
-        final View myLayout = findViewById(R.id.imageView3);
-        myLayout.animate().rotation(1080).alpha(1).setDuration(2300);
+        View myLayout = findViewById(R.id.imageViewLoadScreen1);
+        myLayout.animate().alpha(0).setDuration(3500);
 
-        new Handler().postDelayed(() ->
-
-                myLayout.animate().alpha(0).setDuration(600)
-
-        , 3000);
 
         new Handler().postDelayed(() -> {
 

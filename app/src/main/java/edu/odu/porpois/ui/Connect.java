@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Window;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,10 +22,12 @@ public class Connect extends AppCompatActivity {
         assert actionBar != null;
         actionBar.hide();
 
+
         setContentView(R.layout.activity_connect);
 
         Window window = Connect.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
+
     }
 
     private void setActionBarColor(ActionBar actionBar, String color) {

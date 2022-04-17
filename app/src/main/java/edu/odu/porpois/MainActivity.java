@@ -11,16 +11,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-//import androidx.databinding.DataBindingUtil;
 
 import com.example.porpois.R;
-//import com.example.porpois.databinding.ActivityMainBinding;
+
 import edu.odu.porpois.ui.Connect;
 import edu.odu.porpois.ui.Give;
 import edu.odu.porpois.ui.Go;
 import edu.odu.porpois.ui.Help;
 import edu.odu.porpois.ui.Make;
 import edu.odu.porpois.ui.Try;
+
+
 
 public class MainActivity extends AppCompatActivity {
 //    private ActivityMainBinding binding;
@@ -29,17 +30,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*
-            This removes the action bar (top banner that said "porpois").
-            I think it looks cleaner without it when it comes out of the load
-            screen but this is something we can discuss later
-        */
-        ActionBar actionBar = getSupportActionBar();
-        assert actionBar != null;
-        actionBar.hide();
 
         Window window = MainActivity.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
+        setActionBarColor();
 
         setContentView(R.layout.activity_main);
 
@@ -99,12 +93,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setActionBarColor(ActionBar actionBar, String color) {
-        ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor(color));
 
+    private void setActionBarColor(){
+        // Define ActionBar object
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+
+        // Define ColorDrawable object and parse color
+        // using parseColor method
+        // with color hash code as its parameter
+        ColorDrawable colorDrawable
+                = new ColorDrawable(Color.parseColor("#6E98D4"));
+
+        // Set BackgroundDrawable
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
+
     }
 
 }

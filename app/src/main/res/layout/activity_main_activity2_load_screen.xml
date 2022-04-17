@@ -2,21 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageViewLoadScreen1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4E5D7"
+    android:background="#F8F7F6"
     tools:context="edu.odu.porpois.ui.ActivityLoadScreen">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="279dp"
-        android:layout_height="521dp"
-        android:contentDescription="@string/logo"
-        android:scaleType="fitCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/clipart560212" />
+        app:srcCompat="@drawable/load1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
