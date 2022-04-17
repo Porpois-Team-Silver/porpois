@@ -25,13 +25,6 @@ import com.example.porpois.R;
 
 import edu.odu.porpois.ui.ActivityCreateNickname;
 import edu.odu.porpois.ui.ActivityProfile;
-import edu.odu.porpois.ui.Connect;
-import edu.odu.porpois.ui.Give;
-import edu.odu.porpois.ui.Go;
-import edu.odu.porpois.ui.Help;
-import edu.odu.porpois.ui.Make;
-import edu.odu.porpois.ui.Try;
-
 
 
 public class MainActivity extends AppCompatActivity {
