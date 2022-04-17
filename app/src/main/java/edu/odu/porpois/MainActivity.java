@@ -7,10 +7,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -100,6 +103,32 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.porpois_menu, menu);
         return true;
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.profile:
+                Toast.makeText(this, "Profile Button Pressed", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.item1:
+                Toast.makeText(this, "Connect Button Presses", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.item2:
+                Toast.makeText(this, "Move Button Pressed", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.item3:
+                Toast.makeText(this, "Give Button Pressed", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.item4:
+                Toast.makeText(this, "Create Button Pressed", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.item5:
+                Toast.makeText(this, "Rejuvenate Button Pressed", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setActionBarColor(){

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class ActivityCreateNickname extends AppCompatActivity {
 
     public void onClickToMainActivity(View view){
         Intent intent = new Intent(ActivityCreateNickname.this, MainActivity.class);
+        Toast.makeText(this, "Welcome", Toast.LENGTH_LONG).show();
         EditText editTextNickname = findViewById(R.id.editTextNickname);
         intent.putExtra("nickname", editTextNickname.getText().toString().trim());
 
