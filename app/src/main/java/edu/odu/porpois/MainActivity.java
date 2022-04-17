@@ -19,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.porpois.R;
 
+import edu.odu.porpois.ui.ActivityCreateNickname;
+import edu.odu.porpois.ui.ActivityProfile;
 import edu.odu.porpois.ui.Connect;
 import edu.odu.porpois.ui.Give;
 import edu.odu.porpois.ui.Go;
@@ -105,7 +107,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.profile:
-                Toast.makeText(this, "Profile Button Pressed", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, ActivityProfile.class);
+                startActivity(intent);
                 return true;
             case R.id.item1:
                 Toast.makeText(this, "Connect Button Presses", Toast.LENGTH_SHORT).show();
@@ -126,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Change the action bar color to a light blue
     private void setActionBarColor(){
         // Define ActionBar object
         ActionBar actionBar;

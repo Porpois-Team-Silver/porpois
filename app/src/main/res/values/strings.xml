@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">porpois</string>
     <string name="helloText">Hello, Pluto!</string>
     <string name="clickMe">Click Me!</string>
@@ -89,10 +89,12 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="logo">Logo</string>
     <string name="nickname">Nickname</string>
+    <string name="nicknameProfilePage">Nickname:\u0020</string>
+    <string name="zipCodeProfilePage">Zip Code:\u0020</string>
     <string name="Welcome_Message">Welcome, Please Personalize Your Porpois Profile</string>
     <string name="create">Create</string>
+    <string name="clear_user_data" tools:ignore="ExtraTranslation">Clear</string>
     <string name="zip_code">Zip Code</string>
-
 
 
 </resources>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Porpois">
         <activity
+            android:name="edu.odu.porpois.ui.ActivityProfile"
+            android:exported="false" />
+        <activity
             android:name="edu.odu.porpois.ui.ActivityCreateNickname"
             android:exported="false" />
         <activity
