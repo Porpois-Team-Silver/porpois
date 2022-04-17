@@ -19,7 +19,9 @@ public class ActivityLoadScreen extends AppCompatActivity {
         setContentView(R.layout.activity_main_activity2_load_screen);
 
         View myLayout = findViewById(R.id.imageViewLoadScreen1);
-        myLayout.animate().alpha(0).setDuration(3500);
+        myLayout.animate().setDuration(4000);
+
+        new Handler().postDelayed(() -> myLayout.animate().alpha(0).setDuration(1000), 2500);
 
 
         new Handler().postDelayed(() -> {

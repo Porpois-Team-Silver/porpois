@@ -42,16 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        // set up data binding on this activity
+        /* set up data binding on this activity
 //        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
-
 
         String nickname = getIntent().getStringExtra("nickname").trim();
         TextView greeting = findViewById(R.id.mainActivityGreeting);
         greeting.setText(String.format("Good Afternoon, %s", nickname));
-
-
 
         // connect button behaviors
         Button connectButton = findViewById(R.id.connectButton);
@@ -94,8 +90,7 @@ public class MainActivity extends AppCompatActivity {
             Intent helpIntent = new Intent(MainActivity.this, Help.class);
             startActivity(helpIntent);
         });
-
-
+        */
     }
 
     @Override
@@ -135,13 +130,11 @@ public class MainActivity extends AppCompatActivity {
         // Define ActionBar object
         ActionBar actionBar;
         actionBar = getSupportActionBar();
-
         // Define ColorDrawable object and parse color
         // using parseColor method
         // with color hash code as its parameter
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#6E98D4"));
-
         // Set BackgroundDrawable
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
