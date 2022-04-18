@@ -12,7 +12,7 @@
     <string name="item5">Rejuvenate</string>
 
     <string name="likeClicked">Like: 🤗 Great! We\'ll do this task more often.</string>
-    <string name="dislikeClicked">Dislike: 😔 Ok. We won\'t show this task anymore.</string>
+    <string name="dislikeClicked" tools:ignore="Typos">Dislike: 😔 Ok. We won\'t show this task anymore.</string>
 
 
     <!--  Dummy Object 1 -->
@@ -97,6 +97,7 @@
     <string name="Welcome_Message">Welcome, Please Personalize Your Porpois Profile</string>
     <string name="create">Create</string>
     <string name="clear_user_data" tools:ignore="ExtraTranslation">Clear</string>
+    <string name="refresh_sort_algorithm">Refresh Sort Algorithm</string>
     <string name="zip_code">Zip Code</string>
 
 

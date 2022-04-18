@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         Window window = MainActivity.this.getWindow();
         window.setStatusBarColor(Color.rgb(99, 136, 185));
         setActionBarColor();
+        setTitle("Porpois");
+        getActionBar();
 
         setContentView(R.layout.activity_main);
 
@@ -78,23 +80,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.item1:
-                Toast.makeText(this, "Connect Button Presses", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Connect Category Selected", Toast.LENGTH_SHORT).show();
                 getActivities(1);
                 return true;
             case R.id.item2:
-                Toast.makeText(this, "Move Button Pressed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Move Category Selected", Toast.LENGTH_SHORT).show();
                 getActivities(2);
                 return true;
             case R.id.item3:
-                Toast.makeText(this, "Give Button Pressed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Give Category Selected", Toast.LENGTH_SHORT).show();
                 getActivities(3);
                 return true;
             case R.id.item4:
-                Toast.makeText(this, "Create Button Pressed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Create Category Selected", Toast.LENGTH_SHORT).show();
                 getActivities(4);
                 return true;
             case R.id.item5:
-                Toast.makeText(this, "Rejuvenate Button Pressed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Rejuvenate Category Selected", Toast.LENGTH_SHORT).show();
                 getActivities(5);
                 return true;
         }
