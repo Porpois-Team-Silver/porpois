@@ -33,6 +33,7 @@ public class ActivityProfile extends AppCompatActivity {
     private static final String KEY_NICKNAME = "nickName";
     private static final String KEY_ZIPCODE = "zipCode";
 
+    boolean algorithmData = true;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -157,5 +158,48 @@ public class ActivityProfile extends AppCompatActivity {
 
     public void onClick(View view) {
         sortingAlgortihm();
+    }
+
+    public void onClick2(View view) {
+
+        if(algorithmData) {
+
+            algorithmData = false;
+            View myLayout = findViewById(R.id.textViewTotalLikes);
+            myLayout.animate().alpha(1);
+            myLayout = findViewById(R.id.textViewConnectProfile);
+            myLayout.animate().alpha(1);
+            myLayout = findViewById(R.id.textViewMoveProfile);
+            myLayout.animate().alpha(1);
+            myLayout = findViewById(R.id.textViewGiveProfile);
+            myLayout.animate().alpha(1);
+            myLayout = findViewById(R.id.textViewCreateProfile);
+            myLayout.animate().alpha(1);
+            myLayout = findViewById(R.id.textViewRejuvenateProfile);
+            myLayout.animate().alpha(1);
+            myLayout = findViewById(R.id.imageViewPieChart);
+            myLayout.animate().alpha(0);
+
+        }
+        else{
+
+            algorithmData = true;
+            View myLayout = findViewById(R.id.textViewTotalLikes);
+            myLayout.animate().alpha(0);
+            myLayout = findViewById(R.id.textViewConnectProfile);
+            myLayout.animate().alpha(0);
+            myLayout = findViewById(R.id.textViewMoveProfile);
+            myLayout.animate().alpha(0);
+            myLayout = findViewById(R.id.textViewGiveProfile);
+            myLayout.animate().alpha(0);
+            myLayout = findViewById(R.id.textViewCreateProfile);
+            myLayout.animate().alpha(0);
+            myLayout = findViewById(R.id.textViewRejuvenateProfile);
+            myLayout.animate().alpha(0);
+            myLayout = findViewById(R.id.imageViewPieChart);
+            myLayout.animate().alpha(1);
+
+        }
+
     }
 }

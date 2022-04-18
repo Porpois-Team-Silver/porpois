@@ -71,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    // Disables the back button
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

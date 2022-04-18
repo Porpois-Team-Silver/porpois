@@ -97,7 +97,7 @@
     <string name="Welcome_Message">Welcome, Please Personalize Your Porpois Profile</string>
     <string name="create">Create</string>
     <string name="clear_user_data" tools:ignore="ExtraTranslation">Clear</string>
-    <string name="refresh_sort_algorithm">Refresh Sort Algorithm</string>
+    <string name="refresh_sort_algorithm">Generate Sort Algorithm</string>
     <string name="zip_code">Zip Code</string>
 
 
