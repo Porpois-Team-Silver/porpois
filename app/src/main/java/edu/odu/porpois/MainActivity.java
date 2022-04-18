@@ -59,23 +59,6 @@ public class MainActivity extends AppCompatActivity {
         taskGallery = findViewById(R.id.taskGallery);
         gInflator = LayoutInflater.from(this);
 
-//        for(int i = 1; i < 20; i++) {
-//            View view = gInflator.inflate(R.layout.task, taskGallery, false);
-//            ImageView scrollImg = view.findViewById(R.id.scrollImg);
-//
-//            if(i % 3 == 0) {
-//                scrollImg.setImageResource(R.drawable.sample1);
-//            }
-//            else if (i % 2 == 0) {
-//                scrollImg.setImageResource(R.drawable.sample2);
-//            }
-//            else {
-//                scrollImg.setImageResource(R.drawable.sample3);
-//            }
-//
-//            taskGallery.addView(view);
-//        }
-
         getActivities(0);
     }
 
@@ -155,6 +138,24 @@ public class MainActivity extends AppCompatActivity {
                     Bitmap bmp = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
                     View view = gInflator.inflate(R.layout.task, taskGallery, false);
+                    ImageView likes = view.findViewById(R.id.likeImg);
+                    likes.setImageResource(R.drawable.like);
+                    likes.setOnClickListener(inView -> {
+                        Toast.makeText(
+                                MainActivity.this,
+                                R.string.likeClicked,
+                                Toast.LENGTH_LONG
+                        ).show();
+                    });
+                    ImageView dislikes = view.findViewById(R.id.dislikeImg);
+                    dislikes.setImageResource(R.drawable.dislike);
+                    dislikes.setOnClickListener(inView -> {
+                        Toast.makeText(
+                                MainActivity.this,
+                                R.string.dislikeClicked,
+                                Toast.LENGTH_LONG
+                        ).show();
+                    });
                     ImageView scrollImg = view.findViewById(R.id.scrollImg);
                     scrollImg.setImageBitmap(bmp);
                     taskGallery.addView(view);
@@ -167,5 +168,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }

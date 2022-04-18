@@ -11,6 +11,9 @@
     <string name="item4">Create</string>
     <string name="item5">Rejuvenate</string>
 
+    <string name="likeClicked">Like: 🤗 Great! We\'ll do this task more often.</string>
+    <string name="dislikeClicked">Dislike: 😔 Ok. We won\'t show this task anymore.</string>
+
 
     <!--  Dummy Object 1 -->
     <string name="task1_category">Connect</string>

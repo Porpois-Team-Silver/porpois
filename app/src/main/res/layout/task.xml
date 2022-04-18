@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="409dp"
-    android:layout_height="268dp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="false"
     android:orientation="vertical"
     tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    tools:layout_editor_absoluteY="1dp">
 
     <ImageView
         android:id="@+id/scrollImg"
-        android:layout_width="match_parent"
-        android:layout_height="268dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         app:srcCompat="@drawable/sample1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="64dp">
+
+        <ImageView
+            android:id="@+id/likeImg"
+            android:layout_width="44dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="16dp"
+            android:background="#67C142"
+            app:srcCompat="@drawable/like" />
+
+        <ImageView
+            android:id="@+id/dislikeImg"
+            android:layout_width="45dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:background="#DF6C6C"
+            app:srcCompat="@drawable/dislike" />
+
+    </LinearLayout>
+
+
 </LinearLayout>
