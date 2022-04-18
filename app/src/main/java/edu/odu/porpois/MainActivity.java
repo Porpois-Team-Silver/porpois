@@ -2,9 +2,13 @@ package edu.odu.porpois;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,13 +26,24 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.porpois.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import edu.odu.porpois.model.TaskActivity;
 import edu.odu.porpois.ui.ActivityCreateNickname;
 import edu.odu.porpois.ui.ActivityProfile;
 
 
 public class MainActivity extends AppCompatActivity {
 //    private ActivityMainBinding binding;
+    private final String TAG = "MAIN";
+
+    private LayoutInflater gInflator;
+    private LinearLayout taskGallery;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -41,25 +56,27 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        LinearLayout taskGallery = findViewById(R.id.taskGallery);
-        LayoutInflater gInflator = LayoutInflater.from(this);
+        taskGallery = findViewById(R.id.taskGallery);
+        gInflator = LayoutInflater.from(this);
 
-        for(int i = 1; i < 20; i++) {
-            View view = gInflator.inflate(R.layout.task, taskGallery, false);
-            ImageView scrollImg = view.findViewById(R.id.scrollImg);
+//        for(int i = 1; i < 20; i++) {
+//            View view = gInflator.inflate(R.layout.task, taskGallery, false);
+//            ImageView scrollImg = view.findViewById(R.id.scrollImg);
+//
+//            if(i % 3 == 0) {
+//                scrollImg.setImageResource(R.drawable.sample1);
+//            }
+//            else if (i % 2 == 0) {
+//                scrollImg.setImageResource(R.drawable.sample2);
+//            }
+//            else {
+//                scrollImg.setImageResource(R.drawable.sample3);
+//            }
+//
+//            taskGallery.addView(view);
+//        }
 
-            if(i % 3 == 0) {
-                scrollImg.setImageResource(R.drawable.sample1);
-            }
-            else if (i % 2 == 0) {
-                scrollImg.setImageResource(R.drawable.sample2);
-            }
-            else {
-                scrollImg.setImageResource(R.drawable.sample3);
-            }
-
-            taskGallery.addView(view);
-        }
+        getActivities(0);
     }
 
     @Override
@@ -79,18 +96,23 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.item1:
                 Toast.makeText(this, "Connect Button Presses", Toast.LENGTH_SHORT).show();
+                getActivities(1);
                 return true;
             case R.id.item2:
                 Toast.makeText(this, "Move Button Pressed", Toast.LENGTH_SHORT).show();
+                getActivities(2);
                 return true;
             case R.id.item3:
                 Toast.makeText(this, "Give Button Pressed", Toast.LENGTH_SHORT).show();
+                getActivities(3);
                 return true;
             case R.id.item4:
                 Toast.makeText(this, "Create Button Pressed", Toast.LENGTH_SHORT).show();
+                getActivities(4);
                 return true;
             case R.id.item5:
                 Toast.makeText(this, "Rejuvenate Button Pressed", Toast.LENGTH_SHORT).show();
+                getActivities(5);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -109,7 +131,41 @@ public class MainActivity extends AppCompatActivity {
         // Set BackgroundDrawable
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
+    }
 
+    public void getActivities(int categoryNumber) {
+        taskGallery.removeAllViews();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        CollectionReference activitiesRef = db.collection("activities");
+        Query query;
+
+        if (categoryNumber != 0)
+            query = activitiesRef.whereEqualTo(TaskActivity.CATEGORY, categoryNumber).limit(20);
+        else
+            query = activitiesRef.limit(20);
+
+        query.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                for (QueryDocumentSnapshot snapshot : queryDocumentSnapshots)
+                {
+                    String encodedImage = snapshot.get("image").toString();
+                    byte[] decodedString = Base64.decode(encodedImage, Base64.DEFAULT);
+                    Bitmap bmp = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                    View view = gInflator.inflate(R.layout.task, taskGallery, false);
+                    ImageView scrollImg = view.findViewById(R.id.scrollImg);
+                    scrollImg.setImageBitmap(bmp);
+                    taskGallery.addView(view);
+
+//                    TaskActivity taskActivity = new TaskActivity(snapshot);
+//                    activityList.add(taskActivity);
+//                    Log.d(TAG, taskActivity.toString());
+                    Log.d(TAG, "snap: " + encodedImage);
+                }
+            }
+        });
     }
 
 }
