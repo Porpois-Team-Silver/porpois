@@ -2,6 +2,7 @@ package edu.odu.porpois.ui;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,12 +19,21 @@ import com.example.porpois.R;
 
 import java.util.Random;
 
+import edu.odu.porpois.MainActivity;
+
 public class ActivityProfile extends AppCompatActivity {
 
     //Create TextView variables for sharedPreferences
     TextView textView_nickName,textView_zipCode;
     Button button_clear, button_refresh_algorithm;
     SharedPreferences sharedPreferences;
+    FrameLayout profileBtn;
+    FrameLayout pointsBtn;
+    TextView profileBtnText;
+    TextView pointsBtnText;
+    ConstraintLayout porPointsView;
+    ConstraintLayout profileView;
+    TextView porPoints;
 
     //Create TextView variables for sort algorithm
     TextView textView_total_likes, textView_connect_likes, textView_move_likes, textView_give_likes,
@@ -35,7 +46,7 @@ public class ActivityProfile extends AppCompatActivity {
 
     boolean algorithmData = true;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "ResourceAsColor"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +66,13 @@ public class ActivityProfile extends AppCompatActivity {
         textView_nickName = findViewById(R.id.textViewNickName);
         textView_zipCode = findViewById(R.id.textViewZipCode);
         button_clear = findViewById(R.id.buttonClear);
+        profileBtnText = findViewById(R.id.profileId);
+        pointsBtnText = findViewById(R.id.pointId);
+        profileBtn = findViewById(R.id.profileBtnId);
+        pointsBtn = findViewById(R.id.pointsBtnId);
+        porPointsView = findViewById(R.id.viewPorPointsId);
+        profileView = findViewById(R.id.viewProfileId);
+        porPoints = findViewById(R.id.porPointsId);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
 
@@ -82,7 +100,27 @@ public class ActivityProfile extends AppCompatActivity {
         //This generates random numbers when the ActivityProfile loads up
         sortingAlgortihm();
 
+        profileBtn.setOnClickListener(view -> {
+            profileBtn.setBackgroundColor(getResources().getColor(R.color.buttonColor));
+            profileBtnText.setTextColor(getResources().getColor(R.color.white));
+            pointsBtn.setBackgroundColor(getResources().getColor(R.color.white));
+            pointsBtnText.setTextColor(getResources().getColor(R.color.black));
 
+            porPointsView.setVisibility(View.INVISIBLE);
+            profileView.setVisibility(View.VISIBLE);
+        });
+
+        pointsBtn.setOnClickListener(view -> {
+            pointsBtn.setBackgroundColor(getResources().getColor(R.color.buttonColor));
+            pointsBtnText.setTextColor(getResources().getColor(R.color.white));
+            profileBtn.setBackgroundColor(getResources().getColor(R.color.white));
+            profileBtnText.setTextColor(getResources().getColor(R.color.black));
+
+            porPoints.setText(MainActivity.porPoints + " PorPoints");
+
+            profileView.setVisibility(View.INVISIBLE);
+            porPointsView.setVisibility(View.VISIBLE);
+        });
     }
 
     //create a function that generates random numbers between 0 - 100
